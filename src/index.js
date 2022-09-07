@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {createStore} from 'react-redux';
+import {createStoreHook} from 'react-redux';
 import {Provider} from 'react-redux';
 import userReducer from "../src/store/reducer/mainreducer"
 
-const userStore= createStore(userReducer,{user:[]});
+const userStore= createStoreHook(userReducer,{user:[]});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
